@@ -1,2 +1,37 @@
 @import "common.scss";
 @import "_minix.scss";
+.wrap {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.cont {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    .list {
+        width: 100;
+        li {
+            width: 100%;
+            h3 {
+                background: #ccc;
+                padding: pxTorem(5px) pxTorem(10px);
+                @include sizing;
+                font-weight: 600;
+                font-size: pxTorem(14px);
+            }
+            ol {
+                width: 100%;
+                li {
+                    width: 100%;
+                    height: pxTorem(44px);
+                    line-height: pxTorem(44px);
+                    border-bottom: thin solid #ccc;
+                    padding: 0 pxTorem(10px);
+                    @include sizing;
+                }
+            }
+        }
+    }
+}

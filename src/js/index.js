@@ -23,7 +23,9 @@ function rander(data) {
         arr.push(obj[i]);
     };
     var html = "";
+    var list = "";
     arr.forEach(function(v) {
+        list += `<li>${v.title}</li>`
         html += `<li>
                     <h3>${v.title}</h3>
                     <ol>`
@@ -35,5 +37,19 @@ function rander(data) {
                     </ol>
                 </li>`
     });
+    $(".side").html(list);
     $(".list").append(html);
 }
+var bscroll = new BScroll(".wrap", {
+    click: true,
+    probeType: 2
+});
+$(".side").on("click", "li", function() {
+    var index = $(this).index();
+    bscroll.scrollToElement($(".list>li").eq(index)[0], 1000);
+    $(".box").html($(this).html());
+    $(".box").show();
+    setTimeout(function() {
+        $(".box").hide();
+    }, 600)
+})

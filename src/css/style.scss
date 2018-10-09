@@ -8,8 +8,6 @@
 
 .cont {
     width: 100%;
-    height: 100%;
-    overflow: hidden;
     .list {
         width: 100;
         li {
@@ -34,4 +32,30 @@
             }
         }
     }
+}
+
+.side {
+    position: fixed;
+    top: pxTorem(100px);
+    right: pxTorem(10px);
+    background: #ccc;
+    li {
+        padding: pxTorem(3px);
+    }
+}
+
+.box {
+    width: pxTorem(50px);
+    height: pxTorem(50px);
+    line-height: pxTorem(50px);
+    text-align: center;
+    font-size: pxTorem(16px);
+    font-weight: 600;
+    background: #ccc;
+    border-radius: pxTorem(10px);
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
 }

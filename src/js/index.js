@@ -51,5 +51,5 @@ $(".side").on("click", "li", function() {
     $(".box").show();
     setTimeout(function() {
         $(".box").hide();
-    }, 600)
+    }, 600);
 })
